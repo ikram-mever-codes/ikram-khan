@@ -1,198 +1,348 @@
-.container {
-  width: 100vw;
-  height: 100vh;
-  padding: 0 25px;
+.hero_section {
   position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background: transparent;
-  gap: 10px;
-  z-index: 0;
+  gap: 1rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.intro {
+.title_container {
+  text-align: left;
+  margin-bottom: 0.5rem;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  line-height: 1.7rem;
-  font-family: 'Montserrat Alternates', sans-serif;
-  color: var(--white);
+}
+
+.greeting {
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  font-family: "Montserrat Alternates", sans-serif;
+  color: var(--cyan);
+  margin-bottom: 0.3rem;
+  font-weight: 500;
 }
 
 .name {
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+  line-height: 1.1;
+  font-family: "Bungee", cursive;
+  word-break: break-word;
+}
+
+.name_highlight {
   color: var(--cyan);
-  font-family: 'Bungee', cursive;
-  font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.name_highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--cyan);
+  opacity: 0.7;
+}
+
+.title_rotator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(1rem, 4vw, 1.4rem);
+  color: var(--white);
+  margin-top: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.title_static {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.title_dynamic {
+  position: relative;
+  min-height: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.role_text {
+  color: var(--cyan);
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .desc {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 0.75rem;
-  word-spacing: 0.15rem;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  line-height: 1.5;
   color: var(--white);
+  margin: 0.5rem 0;
+  opacity: 0.9;
+  max-width: 100%;
 }
 
-.btn_container {
-  font-size: 0.9rem;
+.highlight {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+}
+
+.stat_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 70px;
+}
+
+.stat_number {
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  font-weight: 700;
+  color: var(--cyan);
+  font-family: "Bungee", cursive;
+}
+
+.stat_label {
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  color: var(--white);
+  opacity: 0.8;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-align: center;
+}
+
+.cta_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+.primary_btn,
+.secondary_btn {
+  padding: 0.8rem 1.5rem;
+  font-size: clamp(0.85rem, 2.5vw, 0.9rem);
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  padding: 10px 13px;
-  transition: 0.2s;
-  /* border-radius: 4px; */
+  width: 100%;
+}
+
+.primary_btn {
+  background: var(--cyan);
+  color: var(--dark-blue);
+}
+
+.primary_btn:hover {
+  background: var(--white);
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.4);
+}
+
+.secondary_btn {
+  background: transparent;
   color: var(--white);
-  border: 2px solid var(--grey);
+  border: 2px solid var(--cyan);
 }
 
-.btn_hover,
-.btn {
-  font-family: 'Montserrat Alternates', sans-serif;
-  transition: all 0.2s ease-out;
-}
-
-.btn_hover {
-  position: absolute;
-  top: 10px;
-  left: 13px;
-  opacity: 0;
-  transform: translate(0, -100%);
+.secondary_btn:hover {
+  background: rgba(0, 200, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
 }
 
 .arrow {
-  margin-left: 5px;
-  font-size: 17px;
-  display: inline;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
 }
 
-.btn_container:hover,
-.btn_container:focus {
-  color: var(--cyan);
-  background-color: var(--dark-blue);
-  border-color: var(--cyan);
-  box-shadow: 0 0 8px var(--cyan);
-  text-shadow: 0 0 8px var(--cyan);
+.primary_btn:hover .arrow {
+  transform: translateX(3px);
 }
 
-.btn_container:hover .btn,
-.btn_container:focus .btn {
-  opacity: 0;
-  transform: translate(0, 100%);
+.scroll_indicator {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--white);
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: clamp(0.7rem, 2vw, 0.8rem);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
 
-.btn_container:hover .btn_hover,
-.btn_container:focus .btn_hover {
+.scroll_indicator:hover {
   opacity: 1;
-  transform: translate(0, 0);
 }
 
-.btn_container:hover .arrow,
-.btn_container:focus .arrow {
-  transform: rotate(90deg);
+.scroll_arrow {
+  width: 18px;
+  height: 25px;
+  border: 2px solid var(--cyan);
+  border-radius: 12px;
+  position: relative;
+}
+
+.scroll_arrow::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 6px;
+  background: var(--cyan);
+  border-radius: 2px;
+  animation: scrollBounce 2s infinite;
+}
+
+@keyframes scrollBounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(3px);
+  }
+}
+
+/* Mobile-first responsive design */
+@media screen and (min-width: 375px) {
+  .container {
+    padding: 1.5rem 2rem 5rem;
+    gap: 1.2rem;
+  }
 }
 
 @media screen and (min-width: 480px) {
   .container {
-    align-items: center;
-    padding-left: 0;
+    padding: 2rem 2.5rem 6rem;
+    gap: 1.5rem;
   }
 
-  .intro {
-    font-family: 'Bungee', cursive;
+  .cta_container {
     flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    max-width: 400px;
   }
 
-  .desc {
-    font-size: 0.9rem;
-  }
-
-  .btn_container {
-    font-size: 0.9rem;
-    padding: 8px 13px;
-  }
-
-  .btn_hover {
-    top: 8px;
-  }
-
-  .arrow {
-    margin-left: 6px;
-    font-size: 16px;
+  .primary_btn,
+  .secondary_btn {
+    width: auto;
+    flex: 1;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .intro {
-    font-size: 1.7rem;
-    line-height: 2.1rem;
+  .container {
+    padding: 3rem 4rem 7rem;
+    gap: 2rem;
   }
 
-  .name {
-    font-size: 1.7rem;
+  .title_rotator {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
   }
 
-  .desc {
-    font-size: 1.03rem;
+  .stats {
+    max-width: 400px;
+    gap: 2rem;
   }
 
-  .btn_container {
-    font-size: 0.95rem;
-  }
-
-  .arrow {
-    font-size: 18px;
+  .stat_number {
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .intro {
-    font-size: 1.9rem;
-    letter-spacing: 0.2rem;
-    line-height: 2.4rem;
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 4rem 6rem 8rem;
   }
 
   .name {
-    font-size: 1.9rem;
+    font-size: clamp(2.5rem, 6vw, 4rem);
   }
 
   .desc {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-  }
-
-  .btn_container {
-    font-size: 1.1rem;
-    padding: 12px 17px;
-  }
-
-  .btn_hover {
-    top: 12px;
-    left: 17px;
-  }
-
-  .arrow {
-    margin-left: 8px;
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: 600px;
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .intro {
-    font-size: 2.1rem;
-    letter-spacing: 0.2rem;
-    line-height: 2.4rem;
+/* Extra small devices */
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 1rem 1rem 4rem;
   }
 
-  .name {
-    font-size: 2.1rem;
+  .title_rotator {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .stats {
+    gap: 0.5rem;
+  }
+
+  .stat_item {
+    min-width: 60px;
+  }
+}
+
+/* Height adjustments for very small screens */
+@media screen and (max-height: 600px) and (max-width: 768px) {
+  .container {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    gap: 0.8rem;
+  }
+
+  .scroll_indicator {
+    bottom: 0.5rem;
   }
 }

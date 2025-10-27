@@ -245,44 +245,68 @@ const projects = [
     source_link: "https://github.com/ikram0codes/",
     live_link: "https://tic-tac-toe121.netlify.app/",
   },
- 
 ];
 
 const testimonials = [
-  
+  {
+    id: 1,
+    name: "Harry",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    text: "Excellent Sysadmin. Helped with deep research and found the issue. Will work again.",
+    country: "Netherlands",
+    linkedIn: "#",
+    category: "Web Development",
+  },
+  {
+    id: 2,
+    name: "Isaac",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    text: "IKRAM did amazing work, I will definitely hire again.",
+    country: "Ghana",
+    linkedIn: "#",
+    category: "Web Development",
+  },
   {
     id: 3,
-    name: "Muhammad Talha Hanif",
+    name: "Chad",
     image:
-      "https://media.licdn.com/dms/image/D4D35AQFAyNEYRXzHgg/profile-framedphoto-shrink_400_400/0/1687861232819?e=1701936000&v=beta&t=7YS0lpSFgX1meg_AubaY4MJLyL7_x1z42qRnGXU8PTo",
-    text: "He possesses a deep understanding of the latest technologies and trends in his field, allowing him to tackle complex challenges with ease.",
-    country: "Pakistan",
-    linkedIn: "https://www.linkedin.com/in/muhammad-talha-hanif/",
+      "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=150&h=150&fit=crop&crop=face",
+    text: "IKRAM did an outstanding job on my project. Their communication was excellent, and they completed the work on time and to my full satisfaction. I highly recommend them for any project.",
+    country: "USA",
+    linkedIn: "#",
+    category: "Web Development",
   },
   {
     id: 4,
-    name: "Ahmed Hasan Rony",
-    image: "https://avatars.githubusercontent.com/u/77187003?v=4",
-    text: "I really am comfortable with collaborating and coding with Ikram. His ingenious ideas give me a lot of ideas solving a problem multiple ways.",
+    name: "Sridhar",
+    image:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face",
+    text: "Ikram helped me build a basic expense tracker app for my personal purpose. He also helped me host it. It was built using Next JS. He did a good job and implemented all what I asked for.",
     country: "India",
-    linkedIn: "https://www.linkedin.com/in/ahroniy/",
+    linkedIn: "#",
+    category: "Web Development",
   },
   {
     id: 5,
-    name: "Innocent N.",
+    name: "Shravan",
     image:
-      "https://media.licdn.com/dms/image/D5603AQE1qYMUswBOAw/profile-displayphoto-shrink_400_400/0/1688151359384?e=1705536000&v=beta&t=b6QNQZaBEBBfH0g7fvcZdS0L9jXgScAvXANDsOE6548",
-    text: "Communication was another strength that Ikram brought to the table. He actively listened, communicated ideas clearly, and collaborated effectively with team members.",
-    country: "Rwanda",
-    linkedIn: "https://www.linkedin.com/in/innocent-n/",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop&crop=face",
+    text: "I thoroughly enjoyed working with IKRAM - they had clear requirements and were easy to communicate with. I would highly recommend them to anyone looking for a great client to work with.",
+    country: "India",
+    linkedIn: "#",
+    category: "Web Development",
   },
   {
     id: 6,
-    name: "Marko Kermichiev",
-    image: "https://avatars.githubusercontent.com/u/112749658?v=4",
-    text: "I learned too much from you and I can say that you are fantastic developer. Working with you is always a pleasure, hope that we can work on some project asap.",
-    country: "Macedonia",
-    linkedIn: "https://www.linkedin.com/in/marko-kermichiev/",
+    name: "Mohammad",
+    image:
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face",
+    text: "IKRAM & team was a pleasure to work with. They were timely, efficient, and delivered top-notch work. I highly recommend them to anyone in need of their services.",
+    country: "Canada",
+    linkedIn: "#",
+    category: "Web Development",
   },
 ];
 
@@ -290,34 +314,81 @@ const services = [
   {
     id: 1,
     icon: responsive,
-    title: "Responsive Design",
-    text: "I specialize in creating websites that are not just visually stunning but also highly adaptable. My responsive designs ensure that your site looks and works perfectly on any device, providing an exceptional user experience regardless of screen size.",
+    title: "Enterprise Architecture",
+    tech: "Microservices, Cloud Native, Serverless",
+    text: "Design and implement scalable, resilient enterprise architectures that support business growth and digital transformation initiatives.",
+    features: [
+      "System Architecture Design",
+      "Cloud Infrastructure Planning",
+      "Scalability & Performance Optimization",
+      "Technical Leadership & Strategy",
+    ],
   },
   {
     id: 2,
     icon: react,
-    title: "Front-end Development",
-    text: "I breathe life into your creative ideas by translating them into captivating web interfaces. Using the latest frontend technologies and best practices, I build engaging, user-friendly websites that leave a lasting impression.",
+    title: "Full-Stack Development",
+    tech: "React, Node.js, Python, TypeScript",
+    text: "End-to-end development of sophisticated web applications with modern frameworks and best practices for enterprise-grade solutions.",
+    features: [
+      "Modern Frontend Development",
+      "RESTful & GraphQL APIs",
+      "Real-time Applications",
+      "Progressive Web Apps",
+    ],
   },
   {
     id: 3,
     icon: fullstack,
-    title: "Back-end Development",
-    text: "My backend development expertise forms the backbone of your web application. I design and build robust, efficient, and secure server-side solutions that handle data management and business logic seamlessly, ensuring your website functions flawlessly.",
+    title: "Technical Leadership",
+    tech: "Team Management, Agile, DevOps",
+    text: "Provide strategic technical leadership, mentor development teams, and drive engineering excellence across organizations.",
+    features: [
+      "Team Leadership & Mentoring",
+      "Code Review & Best Practices",
+      "Technical Roadmap Planning",
+      "Agile Process Optimization",
+    ],
   },
-  // {
-  //   id: 3,
-  //   icon: fullstack,
-  //   title: "SEO and Website Maintenance",
-  //   text: "My backend development expertise forms the backbone of your web application. I design and build robust, efficient, and secure server-side solutions that handle data management and business logic seamlessly, ensuring your website functions flawlessly.",
-  // },
-
-  // {
-  //   id: 4,
-  //   icon: fullstack,
-  //   title: "Back-end Development",
-  //   text: "My backend development expertise forms the backbone of your web application. I design and build robust, efficient, and secure server-side solutions that handle data management and business logic seamlessly, ensuring your website functions flawlessly.",
-  // },
+  {
+    id: 4,
+    icon: responsive,
+    title: "Cloud & DevOps",
+    tech: "AWS, Azure, Docker, Kubernetes",
+    text: "Implement robust CI/CD pipelines, containerization strategies, and cloud infrastructure for seamless deployment and scaling.",
+    features: [
+      "CI/CD Pipeline Implementation",
+      "Container Orchestration",
+      "Infrastructure as Code",
+      "Monitoring & Observability",
+    ],
+  },
+  {
+    id: 5,
+    icon: react,
+    title: "Digital Transformation",
+    tech: "Strategy, Implementation, Optimization",
+    text: "Lead digital transformation initiatives, modernize legacy systems, and implement cutting-edge technologies to drive business innovation.",
+    features: [
+      "Legacy System Modernization",
+      "Digital Strategy Consulting",
+      "Technology Stack Evaluation",
+      "Innovation Implementation",
+    ],
+  },
+  {
+    id: 6,
+    icon: fullstack,
+    title: "Solution Architecture",
+    tech: "System Design, Integration, Security",
+    text: "Architect comprehensive solutions that integrate seamlessly with existing systems while ensuring security, performance, and maintainability.",
+    features: [
+      "System Integration Design",
+      "Security Architecture",
+      "Performance Optimization",
+      "Technical Documentation",
+    ],
+  },
 ];
 
 const navLinks = [

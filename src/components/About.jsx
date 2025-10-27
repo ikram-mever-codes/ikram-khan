@@ -9,61 +9,49 @@ const About = () => (
     <motion.h1 variants={textVariant()} className={style.title}>
       About Me
     </motion.h1>
-    <div className={style.para} >
-      <img
-        src="https://res.cloudinary.com/dz4z5m7qt/image/upload/v1718906806/HAM_2920_nfkugc.jpg"
-        alt="IKRAM KHAN"
-        className={style.ikImage}
-      />
+    <div className={style.para}>
+      <img src="/me.png" alt="IKRAM KHAN" className={style.ikImage} />
 
       <div className={style.wrapper}>
         <motion.p variants={fadeIn("", "", 0.5, 1)} className={style.text}>
-          I'm
+          I'm{" "}
           <a
             href="https://www.linkedin.com/in/ikram-khan-b93251311"
             target="_blank"
             className={style.link}
             rel="noreferrer"
           >
-            &nbsp; IKRAM KHAN, &nbsp;
+            IKRAM KHAN
           </a>
-          a passionate Full Stack Web Developer from Pakistan specializing in
-          Front-end Development, Real-time Web Sockets, Backend Development, Web
-          Design, and blogging. I excel in creating intuitive user interfaces
-          and robust backend systems, driven by a commitment to innovation and
-          continuous learning.
+          , a Senior Software Engineer & Technology Leader with 6+ years of
+          industry expertise. As a former CTO of multinational company and Tech
+          Lead at high-growth startups, I bring comprehensive experience across
+          full-stack development, cloud architecture, project management, and
+          UI/UX design.
         </motion.p>
-        {/* <motion.p variants={fadeIn("", "", 0.5, 1)} className={style.text}>
-        I have a profound love for coding, reading history books, and watching
-        documentaries, which help me gain diverse perspectives and fuel my
-        creativity. I am also passionate about playing soccer ⚽ and enjoy
-        traveling to unique and historical places.
-        <br />I love exploring new programming languages and frameworks,
-        contributing to open-source projects, and participating in hackathons in
-        free time, which continuously improve and enhance my problem-solving
-        abilities. I enjoy working with people, especially in developer teams,
-        and sharing experiences and creativity.
-      </motion.p> */}
+
         <motion.p variants={fadeIn("", "", 0.75, 1)} className={style.text}>
-          My journey began at 12, turning a childhood fascination with computers
-          and games into a thriving career in web development.
+          My journey in technology began at 12, transforming a childhood
+          fascination with computers into a thriving career. I specialize in
+          transforming complex business challenges into scalable digital
+          solutions, having successfully delivered 50+ projects across diverse
+          industries from startups to enterprise-level organizations.
         </motion.p>
-        <motion.p variants={fadeIn("", "", 0.75, 1)} className={style.text}>
-          My first project, an e-commerce site for a friend's father, led to
-          numerous local business projects and solidified my love for solving
-          real-world problems through web solutions. Now, as the CEO of a small
-          company and a dedicated freelancer, I continue to deliver impactful
-          web solutions that exceed expectations.
-        </motion.p>
+
         <motion.p variants={fadeIn("", "", 1.25, 1)} className={style.text}>
-          Inspired by what you see?{" "}
+          What sets me apart is my unique blend of deep technical expertise and
+          strategic leadership. I excel at bridging the gap between technical
+          execution and business objectives, ensuring every solution delivers
+          tangible business value while meeting the highest technical standards.
+        </motion.p>
+
+        <motion.p variants={fadeIn("", "", 1.75, 1)} className={style.text}>
+          Let's build something extraordinary together.{" "}
           <a href="/#contact" className={style.link} rel="noreferrer">
-            Contact
+            Get in touch
           </a>{" "}
-          me or reach me out at <b>ikram.codes@gmail.com</b> to collaborate on
-          your next big project. Explore my resume to learn more about my
-          journey, qualifications, and expertise., eager to collaborate on your
-          next big endeavor.
+          at <b>ikram.codes@gmail.com</b> to discuss how we can collaborate on
+          your next big project.
         </motion.p>
       </div>
     </div>

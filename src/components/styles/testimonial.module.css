@@ -1,3 +1,8 @@
+.container {
+  padding: 80px 20px;
+  background: transparent;
+}
+
 .title {
   color: var(--white);
   font-size: 1.8rem;
@@ -24,8 +29,13 @@
 .subtitle {
   text-align: center;
   font-size: 0.9rem;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
   color: var(--white);
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
 }
 
 .carousel_container {
@@ -36,12 +46,22 @@
   display: flex;
   justify-content: center;
   gap: 50px;
+  margin: 30px 0;
 }
 
 .button {
   display: block;
   font-size: 1.5rem;
   color: var(--cyan);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  color: var(--white);
 }
 
 .prev {
@@ -52,9 +72,15 @@
 }
 
 @keyframes prev {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(5px, 0); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .next {
@@ -65,9 +91,15 @@
 }
 
 @keyframes next {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(-5px, 0); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .card_container {
@@ -84,13 +116,66 @@
   background-color: var(--dark-blue);
   padding: 50px 40px;
   overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--cyan);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--cyan);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.quoteSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.openquote {
+  margin: 0;
+  font-size: 2.2rem;
+  color: var(--cyan);
+}
+
+.starRating {
+  display: flex;
+  gap: 2px;
+}
+
+.starFilled {
+  color: var(--cyan);
+  font-size: 0.9rem;
+}
+
+.star {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.9rem;
 }
 
 .img {
@@ -98,13 +183,7 @@
   height: 45px;
   object-fit: cover;
   border-radius: 50%;
-  transform: translateY(6px);
-}
-
-.openquote {
-  margin: 15px 0 25px 0;
-  font-size: 2.2rem;
-  color: var(--cyan);
+  border: 2px solid var(--cyan);
 }
 
 .para {
@@ -112,25 +191,43 @@
   font-weight: 500;
   color: var(--white);
   padding-bottom: 15px;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 20px;
 }
 
 .label {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-top: 15px;
+}
+
+.clientInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .name {
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--white);
+  margin: 0;
 }
 
 .country {
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
   font-size: 0.75rem;
   color: var(--cyan);
+}
+
+.category {
+  font-size: 0.7rem;
+  color: var(--cyan);
+  font-family: "Montserrat Alternates", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .icon {
@@ -138,6 +235,7 @@
   padding-bottom: 2px;
   position: relative;
   color: var(--cyan);
+  transition: all 0.3s ease;
 }
 
 .icon::after {
@@ -154,15 +252,47 @@
 
 .icon:hover {
   cursor: pointer;
+  color: var(--white);
+  transform: scale(1.1);
 }
 
 .icon:hover::after {
   width: 100%;
 }
 
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicatorActive {
+  background: var(--cyan);
+  transform: scale(1.2);
+}
+
+.hidden {
+  display: none;
+}
+
 @media screen and (min-width: 480px) {
   .title {
     font-size: 1.9rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
   }
 
   .button {
@@ -191,6 +321,10 @@
 
   .next {
     right: 10%;
+  }
+
+  .btn_container {
+    margin: 0;
   }
 }
 
